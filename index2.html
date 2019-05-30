@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TestVue</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    <div id="app2">
+     <span>ชื่อพนักงาน</span>
+     <input v-model="newData.empName">
+     <span>เงินเดือน</span>
+     <input v-model="newData.saraly">
+     <br><br>
+     <button v-on:click="addEmp">บันทึกข้อมูล</button> <!--Add Method-->
+     <br>
+     <ul>
+       <li v-for= "emp in empGroup" > 
+         {{emp.empName}} ได้เงินเดือน {{emp.saraly}}
+       </li>
+     </ul>
+     <h1>จำนวนเงินเดือนที่ต้องจ่าย : {{ summation }} บาท</h1>
+     <h1>ค่าเฉลี่ยเงินเดือน : {{ avg }} บาท</h1>
+  </div>
+  <script src="App2.js"></script>
+</body>
+</html>

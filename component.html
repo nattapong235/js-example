@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TestVue</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    <div id="vue-app">
+      <ul>
+        <li v-for="comment in comments">{{comment}}</li>
+      </ul>
+     <input type="text" v-model="newComment" v-on:keyup.enter="addComment">
+  </div>
+  <script src="component33.js" charset="UTF-8"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TestVue</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    <div id="app-2">
+      <!--Use V-Model >> 2 Way Binding between form input and app state-->
+      <p>{{ message }}</p>
+      Name : <input v-model="message"><br>
+      Food Fav : <!--Checkbox-->
+      <input type="checkbox" value="ส้มตำ" v-model="food">
+      <label>ส้มตำ</label>
+      <input type="checkbox" value="พิซซ่า" v-model="food">
+      <label>พิซซ่า</label>
+      <input type="checkbox" value="มาม่า" v-model="food">
+      <label>มาม่า</label><br>
+      Gender:<!--Radio-->
+      <input type="radio" value="Male" v-model="Gender">
+      <label>Male</label>
+      <input type="radio" value="FeMale" v-model="Gender">
+      <label>FeMale</label><br>
+      Job: <!--Select-->
+      <Select v-model="Job">
+        <option disabled value="">Please Select You Job :</option>  
+        <option>Programmer</option>
+        <option>Teacher</option>
+        <option>Freelance</option>
+        <option>Student</option>
+      </Select>
+
+<hr>
+      <!--Use V-for >> used for displaying a list of items using the data from-->  
+      <ol>
+        <li v-for="todo in todos"> 
+          {{ todo.text }}
+        </li>
+      </ol>
+<hr>
+     <h3>Name: {{name}} </h3> <!--Display Message-->
+     <h3>Age: {{age}} </h3>
+     <h3>Job: {{Job}} </h3>
+     <h3>Food: {{food}} </h3>
+     <h3>Gender: {{Gender}} </h3>
+     
+
+<hr>
+    <p><span v-if="seen">Now you see me</span></p> <!--Use V-if-->
+<hr>
+    <p><span v-bind:title ="messagehover"> <!--Use V-bind-->
+            Hover your mouse over me for a few seconds
+            to see my dynamically bound title!
+    </span></p>
+<hr>
+    <input type="text" v-on:keyup="addCount">
+    <h3>Count:{{Count}}</h3>
+<hr>
+    
+    <input type="text" name="" v-bind:value="name"></br> <!--Use V-bind-->
+<hr>
+    <button type="button" v-on:click="addAge">Add</button> </br></br><!--Use V-if-->
+    <button type="button" v-on:click="subtractAge">Subtract</button> </div><!--Use V-on-->   
+<hr>
+    
+  </div>
+  
+  <script src="App.js"></script>
+</body>
+</html>
